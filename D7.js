@@ -1,36 +1,137 @@
+console.log("******************ESERCIZIO 1******************")
+
 /* ESERCIZIO 1
   Scrivi una funzione per concatenare due stringhe ricevute come parametri, selezionando solamente i primi 2 caratteri della
   prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
 */
 
+const concatDue = (strA, strB) => {
+  let strMayus = strA.slice(0, 2).concat(strB.slice(-3)
+  )
+
+  return strMayus.toUpperCase()
+}
+
+console.log(concatDue(`hello`, `ciao`))
+
+console.log("******************ESERCIZIO 2******************")
+
 /* ESERCIZIO 2
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
 
+const randomArray = (n) => {
+  let newArray = []
+  for (let i = 0; i < n; i++) {
+    newArray.push(Math.floor(Math.random() * 101))
+  }
+  return newArray
+}
+console.log(randomArray(10))
+console.log("******************ESERCIZIO 3******************")
 /* ESERCIZIO 3
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici (suggerimento: il metodo filter può aiutare)
 */
 
+const newArrayRandom = randomArray(10)
+console.log(newArrayRandom)
+
+const pariArray = newArrayRandom.filter((numeroRandom) => {
+  return numeroRandom % 2 === 0
+
+})
+console.log(pariArray)
+
+
+console.log("******************ESERCIZIO 4******************")
+
 /* ESERCIZIO 4
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+console.log(newArrayRandom)
+
+const sommaArray = newArrayRandom.reduce((accumulatore, element) => {
+  console.log("accumula", accumulatore)
+  console.log("element", element)
+  return accumulatore + element
+}, 0)
+
+console.log(sommaArray)
+
+console.log("******************ESERCIZIO 4******************")
 
 /* ESERCIZIO 5
   Scrivi una funzione per sommare i numeri contenuti in un array (usare REDUCE)
 */
 
+
+console.log(newArrayRandom)
+
+const sommaArray1 = newArrayRandom.reduce((accumulatore, element) => {
+  console.log("accumula", accumulatore)
+  console.log("element", element)
+  return accumulatore + element
+}, 0)
+
+console.log(sommaArray1)
+console.log("******************ESERCIZIO 6******************")
+
 /* ESERCIZIO 6
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
+
+
+const somma6 = randomArray(11)
+console.log(somma6)
+
+const sommaN = (sommaArray, n) => {
+  for (let i = 0; i < sommaArray.length; i++) {
+
+    sommaArray.splice(i, 1, (sommaArray[i] + n))
+  }
+
+}
+console.log(sommaN(somma6, 1))
+
+
+
+
+
+console.log("******************ESERCIZIO 8******************")
 
 /* ESERCIZIO 8
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
 
+const words = [
+  "myname", "issss", "carlosss"
+]
+
+const contatoreStr = (arr) => {
+  let sumWords = []
+  for (let i = 0; i < arr.length; i++) {
+
+    sumWords.push(arr[i].length)
+
+  }
+  return sumWords
+}
+console.log(contatoreStr(words))
+
+
+
+console.log("******************ESERCIZIO 9******************")
+
 /* ESERCIZIO 9
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+
+
+
+
+
+
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -142,26 +243,32 @@ const movies = [
     Poster: "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg"
   }
 ];
+console.log("******************ESERCIZIO 10******************")
 
 /* ESERCIZIO 10
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
+console.log("******************ESERCIZIO 11******************")
 
 /* ESERCIZIO 11
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
+console.log("******************ESERCIZIO 12******************")
 
 /* ESERCIZIO 12
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
+console.log("******************ESERCIZIO 13******************")
 
 /* ESERCIZIO 13
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
+console.log("******************ESERCIZIO 14******************")
 
 /* ESERCIZIO 14
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
+console.log("******************ESERCIZIO 15******************")
 
 /* ESERCIZIO 15
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
