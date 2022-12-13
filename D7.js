@@ -127,7 +127,17 @@ console.log("******************ESERCIZIO 9******************")
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
 
+const disPAri = (num9) => {
+  let dis = []
+  for (let i = 0; i <= num9; i++) {
+    if (i % 2 !== 0) {
+      dis.push(i)
+    }
+  }
+  return dis
 
+}
+console.log(disPAri(100))
 
 
 
